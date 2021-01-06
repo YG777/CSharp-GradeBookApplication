@@ -92,11 +92,6 @@ namespace GradeBook.UserInterfaces
         }
 
 
-
-        //Update where the HelpCommand method outlines what the "create" command does to say
-        //    "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook
-        //    and 'Type' is what type of grading it should use.".
-
         public static void HelpCommand()
         {
             Console.WriteLine();
@@ -104,7 +99,7 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine();
 
             Console.WriteLine("Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook  and 'Type' is what type of grading it should use.");
-
+            Console.WriteLine();
             Console.WriteLine("Load 'Name' - Loads the gradebook with the provided 'Name'.");
             Console.WriteLine();
             Console.WriteLine("Help - Displays all accepted commands.");

@@ -107,8 +107,29 @@ namespace GradeBook.GradeBooks
             }
         }
 
+//BaseGradeBook's GetGPA method returns an int based on the student's letter grade
+// (their GPA or Grade Point Average). 
+
+//When a grade book's IsWeighted property is true and the student type is Honors or DualEnrolled,
+// add 1 to the GPA before returning it.
+
+//An unweighted A is worth 4 points.
+//A weighted A is worth 5 points.
+//An unweighted B is worth 3 points.
+//A weighted B is worth 4 points and so on.
+
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
+            if (IsWeighted == true && letterGrade == 'A')
+            {
+                return 5;
+            }
+
+            if (IsWeighted == true && letterGrade == 'B')
+            {
+                return 6;
+            }
+
             switch (letterGrade)
             {
                 case 'A':
